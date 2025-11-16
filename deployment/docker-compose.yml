@@ -1,1 +1,41 @@
+version: "3.9"
 
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: science_quiz_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./database/backup:/docker-entrypoint-initdb.d:ro
+    environment:
+      MONGO_INITDB_DATABASE: science_quiz_bot
+
+  bot:
+    build:
+      context: ../bot
+      dockerfile: Dockerfile
+    container_name: science_quiz_bot
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    depends_on:
+      - mongo
+
+  admin-panel:
+    build:
+      context: ../admin-panel
+      dockerfile: Dockerfile
+    container_name: science_quiz_admin
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:

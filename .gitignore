@@ -1,1 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.env
+env/
+venv/
+ENV/
+.venv/
 
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Database backups
+database/backup/*.json
+
+# Docker
+*.pid
+*.sock
+*.sqlite3
+*.db
+docker-compose.override.yml
+*.env.local
+*.env.dev
+
+# macOS
+.DS_Store
+
+# node / npm (if any)
+node_modules/
+
+# Admin Panel static files cache
+admin-panel/static/js/*.min.js
+
+# Build / distribution
+dist/
+build/
+*.egg-info/

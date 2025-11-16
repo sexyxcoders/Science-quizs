@@ -1,1 +1,65 @@
+<!-- admin-panel/templates/dashboard.html -->
+{% extends "base.html" %}
 
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2>Dashboard</h2>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h4>Total Users</h4>
+            <p>{{ users|length }}</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h4>Total Questions</h4>
+            <p>{{ questions|length }}</p>
+        </div>
+    </div>
+</div>
+
+<h3>Recent Questions</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Question</th>
+            <th>Category</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for q in questions[:5] %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ q['question'] }}</td>
+            <td>{{ q.get('category','General') }}</td>
+            <td>{{ q['answer'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Top Users</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users[:5] %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ u.get('username', 'Unknown') }}</td>
+            <td>{{ u.get('score', 0) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

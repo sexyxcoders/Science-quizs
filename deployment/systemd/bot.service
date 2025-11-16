@@ -1,1 +1,16 @@
+# deployment/systemd/bot.service
+[Unit]
+Description=Science Quiz Bot
+After=network.target
 
+[Service]
+User=ubuntu                       # Change to your server user
+Group=ubuntu                      # Change to your server user group
+WorkingDirectory=/path/to/bot
+ExecStart=/usr/bin/python3 /path/to/bot/main.py
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/path/to/.env      # Optional: load environment variables
+
+[Install]
+WantedBy=multi-user.target

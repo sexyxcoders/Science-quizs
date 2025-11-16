@@ -7,9 +7,9 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-API_ID = int(os.getenv("API_ID", "123456"))
-API_HASH = os.getenv("API_HASH", "your_api_hash")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "your_bot_token")
+API_ID = int(os.getenv("API_ID", "22657083"))
+API_HASH = os.getenv("API_HASH", "d6186691704bd901bdab275ceaab88f3")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8340952338:AAEBc1ADx1GDN3crCbXskzcW-bSHa6E7uwM")
 
 # Create Pyrogram Client
 app = Client(

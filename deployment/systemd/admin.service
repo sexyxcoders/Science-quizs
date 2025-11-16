@@ -1,1 +1,16 @@
+# deployment/systemd/admin.service
+[Unit]
+Description=Science Quiz Admin Panel
+After=network.target
 
+[Service]
+User=ubuntu                      # Change to your server user
+Group=ubuntu                     # Change to your server user group
+WorkingDirectory=/path/to/admin-panel
+ExecStart=/usr/bin/python3 /path/to/admin-panel/app.py
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/path/to/.env     # Optional: load environment variables
+
+[Install]
+WantedBy=multi-user.target

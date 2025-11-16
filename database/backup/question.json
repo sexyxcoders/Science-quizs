@@ -1,1 +1,62 @@
-
+[
+  {
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "CO2", "NaCl", "O2"],
+    "answer": "H2O",
+    "category": "Chemistry"
+  },
+  {
+    "question": "What planet is known as the Red Planet?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "answer": "Mars",
+    "category": "Astronomy"
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    "answer": "Carbon Dioxide",
+    "category": "Biology"
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "options": ["Diamond", "Gold", "Iron", "Graphite"],
+    "answer": "Diamond",
+    "category": "Earth Science"
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+    "answer": "Albert Einstein",
+    "category": "Physics"
+  },
+  {
+    "question": "What part of the cell contains the genetic material?",
+    "options": ["Cytoplasm", "Nucleus", "Mitochondria", "Ribosome"],
+    "answer": "Nucleus",
+    "category": "Biology"
+  },
+  {
+    "question": "Which planet has the most moons?",
+    "options": ["Jupiter", "Saturn", "Neptune", "Mars"],
+    "answer": "Saturn",
+    "category": "Astronomy"
+  },
+  {
+    "question": "What is the primary gas found in Earth's atmosphere?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "answer": "Nitrogen",
+    "category": "Earth Science"
+  },
+  {
+    "question": "What is the boiling point of water at sea level?",
+    "options": ["90°C", "100°C", "120°C", "80°C"],
+    "answer": "100°C",
+    "category": "Chemistry"
+  },
+  {
+    "question": "Which organ in the human body is responsible for pumping blood?",
+    "options": ["Brain", "Lungs", "Heart", "Kidneys"],
+    "answer": "Heart",
+    "category": "Biology"
+  }
+]
